@@ -21,9 +21,8 @@ function App() {
   return (
     <Router>
       <Menu />
-
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/Home">
           <Header />
           <Tabs />
           <Event />
@@ -31,15 +30,17 @@ function App() {
           <Subscrible />
           <SaleProduct />
           <Advantages />
+        </Route>
+        <Route path="/aboutUs">
           <AboutUs />
+          <Advantages />
           <MoreInfo />
           <Statistic />
           <PoductsWork />
+        </Route>
+        <Route path="/contact">
           <Contact />
         </Route>
-        {/* <Route path="/event">      
-
-        </Route> */}
       </Switch>
 
       <Footer />
