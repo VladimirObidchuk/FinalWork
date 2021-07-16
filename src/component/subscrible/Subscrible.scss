@@ -1,0 +1,150 @@
+@import "../../styles/color";
+@import "../../styles/breakpoint";
+@import "../../styles/font";
+
+.subscrible {
+  margin: 0 auto;
+  &__main {
+    display: flex;
+    width: 100%;
+    height: 395px;
+    color: $color_hover;
+    background: linear-gradient(
+        180deg,
+        rgba(31, 39, 27, 0.33) 0%,
+        rgba(31, 39, 27, 0.45) 100%
+      ),
+      url("./BG_subscribe.png") no-repeat;
+    border-radius: 5px;
+    background-size: cover;
+    justify-content: space-between;
+  }
+
+  &__left {
+    width: 48%;
+    padding-left: 63px;
+    padding-top: 49px;
+    z-index: 200;
+  }
+
+  &__title {
+    @include Montserrat_bold;
+    font-size: 80px;
+    line-height: 91.4%;
+  }
+
+  &__text {
+    width: 54%;
+    @include Montserrat_medium;
+    font-size: 18px;
+    line-height: 102.4%;
+    padding: 15px 0 88px;
+  }
+  &__form {
+    width: 413px;
+    display: flex;
+    align-items: center;
+    @include Montserrat_medium;
+    font-size: 18px;
+    line-height: 102.4%;
+  }
+  &__input {
+    width: 100%;
+    height: 69px;
+    background: rgba(255, 255, 255, 0.11);
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    border-radius: 5px 0 0 5px;
+    border: none;
+  }
+  &__input::placeholder {
+    @include Montserrat_medium;
+    font-size: 18px;
+    line-height: 102.4%;
+    color: rgba(255, 255, 255, 0.26);
+    padding-left: 6.4%;
+  }
+  &__submit {
+    width: 189px;
+    height: 69px;
+    @include Montserrat_medium;
+    font-size: 18px;
+    line-height: 102.4%;
+    background: #f4b02b;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+    z-index: 100;
+  }
+  &__image {
+    position: absolute;
+    width: 640px;
+    height: 487.88px;
+    right: 0;
+    bottom: 0;
+    background: url("./image_subscribe.png") right no-repeat;
+    border-radius: 5px;
+  }
+  &__right {
+    position: relative;
+    display: flex;
+  }
+}
+.error {
+  @include Montserrat_medium;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color_hover;
+}
+@media (max-width: $xxl) {
+}
+@media (max-width: $xl) {
+}
+@media (max-width: $lg) {
+  .subscrible {
+    &__title {
+      font-size: 50px;
+    }
+    &__text {
+      width: 88%;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+    &__image {
+      height: 479.88px;
+      background-size: contain;
+    }
+  }
+}
+@media (max-width: $md) {
+  .subscrible {
+    &__title {
+      font-size: 50px;
+    }
+    &__main {
+      height: 350px;
+    }
+    &__left {
+      width: 48%;
+      padding-left: 50px;
+      padding-top: 40px;
+    }
+    &__text {
+      width: 92%;
+      font-size: 16px;
+      letter-spacing: 1px;
+      padding: 15px 0 65px;
+    }
+    &__image {
+      height: 429.88px;
+      background-size: contain;
+    }
+  }
+}
+@media (max-width: $sm) {
+  .subscrible {
+    &__text {
+      width: 130%;
+    }
+  }
+}

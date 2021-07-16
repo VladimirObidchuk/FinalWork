@@ -1,0 +1,41 @@
+::after,
+::before,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+@import "./libs/font";
+@import "./libs/color";
+@import "../scss/libs/breakpoint";
+@import "../scss/block/menu";
+@import "../scss/block/login__menu";
+@import "../scss/block/header";
+@import "../scss/block/_header__footer";
+@import "../scss/block/_event";
+@import "../scss/block/_main__products";
+@import "../scss/block/subscrible";
+@import "../scss/block/sale__products";
+@import "../scss/block/advantages";
+@import "../scss/block/footer";
+@import "../scss/block/aboutUs";
+@import "../scss/block/moreInfo";
+@import "../scss/block/statistic";
+@import "../scss/block/products__work";
+@import "../scss/block/contact";
+@import "../scss/block/modal__win";
+
+@media (max-width: $xxl) {
+}
+@media (max-width: $xl) {
+}
+@media (max-width: $lg) {
+}
+@media (max-width: $md) {
+}
+@media (max-width: $sm) {
+}

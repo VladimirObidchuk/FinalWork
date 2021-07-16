@@ -1,0 +1,240 @@
+@import "../../styles/color";
+@import "../../styles/breakpoint";
+@import "../../styles/font";
+
+.menu {
+  position: relative;
+  background: url("./top-header_1.png") center bottom repeat;
+  height: 111px;
+  &__main {
+    background: $color;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    z-index: 200;
+
+    padding: 1.5% 0 1%;
+  }
+  &__logo {
+    width: 33%;
+    @include Montserrat_bold;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 4.8%;
+  }
+  &__login {
+    width: 22%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    @include Montserrat_medium;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+  &__header {
+    @include Montserrat_medium;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    width: 46%;
+    cursor: pointer;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    margin-left: 2%;
+    // justify-content: center;
+  }
+  &__item:not(:first-child) {
+    margin-left: 8.3%;
+  }
+
+  &__item:hover .menu__ping {
+    background-color: #ffffff;
+  }
+
+  &__link {
+    text-decoration: none;
+    cursor: pointer;
+    color: $header_color;
+  }
+  &__link:hover {
+    color: $color_hover;
+  }
+  .footer {
+    &__item {
+      margin-left: 2.7%;
+      text-decoration: none;
+      color: black;
+    }
+    &__item:hover {
+      color: $color_hover;
+    }
+  }
+}
+.mobile {
+  &__menu {
+    width: 300px;
+    background: $color;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    right: 0px;
+    top: 70px;
+    transition: all 0.3s;
+    // pointer-events: none;
+    transform: translateX(100%);
+    @include Montserrat_medium;
+    font-size: 30px;
+    line-height: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 400;
+    margin: 0 auto;
+  }
+  &__login {
+    display: none;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    margin-bottom: 2%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__item {
+    text-align: center;
+    color: $color_hover;
+    list-style: none;
+    padding: 10% 0 10%;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+
+  &__link {
+    text-decoration: none;
+    cursor: pointer;
+    color: $header_color;
+  }
+  &__link:hover {
+    color: $color_hover;
+  }
+  // &__login {
+  // }
+
+  // &__item {
+  // }
+}
+.burger {
+  display: none;
+  cursor: pointer;
+  transition: all 0.4s;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  z-index: 3;
+  right: 20px;
+  .burger__button,
+  &::before,
+  &::after {
+    content: "";
+    background-color: rgb(201, 23, 23);
+    position: absolute;
+    width: 100%;
+    height: 2px;
+  }
+  &::before {
+    bottom: 18px;
+  }
+  &::after {
+    top: 15px;
+  }
+
+  .menu-open & {
+    .burger__button {
+      transform: rotate(405deg);
+      opacity: 0;
+    }
+    &::before {
+      transform: rotate(405deg);
+      bottom: 24px;
+    }
+    &::after {
+      transform: rotate(-405deg);
+      top: 24px;
+    }
+  }
+}
+.item1 svg {
+  fill: white;
+}
+.item1 {
+  background: url("./login__icon.svg") center no-repeat;
+  background-size: contain;
+}
+.item2 {
+  background: url("./shop__icon.svg") center no-repeat;
+  background-size: contain;
+  color: $color_hover;
+}
+.login {
+  &__item {
+    width: 30px;
+    height: 30px;
+    color: $color_hover;
+    fill: white;
+  }
+}
+
+@media (max-width: $xxl) {
+}
+@media (max-width: $xl) {
+  .menu__main {
+    padding: 2.5% 0 1%;
+  }
+}
+@media (max-width: $lg) {
+  .burger {
+    display: block;
+  }
+  .mobile__login {
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+    margin-left: 250px;
+  }
+
+  .login__item {
+    display: block;
+  }
+  .menu__header {
+    display: none;
+  }
+  .menu__login {
+    display: none;
+  }
+  .menu__main {
+    justify-content: space-between;
+    padding: 2% 0 0;
+  }
+}
+@media (max-width: $md) {
+  .menu__main {
+    padding: 3% 0 0%;
+  }
+  .mobile__login {
+    margin-left: 150px;
+  }
+}
+@media (max-width: $sm) {
+  .menu__main {
+    padding: 4% 0 0;
+  }
+  .mobile__login {
+    margin-left: 100px;
+  }
+}

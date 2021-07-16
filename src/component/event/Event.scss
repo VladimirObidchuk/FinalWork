@@ -1,0 +1,311 @@
+@import "../../styles/color";
+@import "../../styles/breakpoint";
+@import "../../styles/font";
+
+.event {
+  &__main {
+    height: 648px;
+    background: linear-gradient(
+        180deg,
+        rgba(31, 39, 27, 0.33) 0%,
+        rgba(31, 39, 27, 0.45) 100%
+      ),
+      url("./BG_four.png") no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+  }
+
+  &__left {
+    height: 100%;
+    width: 50%;
+    color: $color_hover;
+    padding: 0.4% 0 0 60px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  &__right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include Montserrat_bold;
+    font-size: 55px;
+    line-height: 102.4%;
+    color: #ffffff;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.08);
+    margin-left: 6%;
+  }
+  &__footer {
+    padding: 9.5% 1.7% 0.5%;
+  }
+}
+.left {
+  &__header {
+    // padding-left: 1.5%;
+  }
+
+  &__subTitle {
+    @include Montserrat_bold;
+    font-size: 16px;
+    line-height: 102.4%;
+  }
+
+  &__title {
+    @include Montserrat_bold;
+    font-size: 80px;
+    line-height: 102.4%;
+    padding: 2.5% 0 3.1%;
+    width: 50%;
+  }
+  &__text {
+    @include Montserrat_medium;
+    font-size: 20px;
+    line-height: 102.4%;
+  }
+}
+.footer {
+  &__title {
+    @include Montserrat_bold;
+    font-size: 77px;
+    line-height: 102.4%;
+    color: #f2b744;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.08);
+  }
+  &__text {
+    @include Montserrat_bold;
+    font-size: 45px;
+    line-height: 102.4%;
+    text-decoration: line-through;
+    color: $footer3;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.08);
+    margin-bottom: 3.1%;
+  }
+}
+.right {
+  &__text {
+    @include Montserrat_bold;
+    font-size: 16px;
+    line-height: 102.4%;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.08);
+    padding: 8% 1% 0;
+  }
+  &__main {
+    width: 481px;
+    height: 540px;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.01);
+    // backdrop-filter: blur(6px);
+    border-radius: 5px;
+    padding-left: 4%;
+    padding-top: 1.5%;
+  }
+  &__duration {
+    @include Montserrat_bold;
+    font-size: 49px;
+    line-height: 133.4%;
+    // color: #f4b02b;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.08);
+  }
+}
+.duration {
+  &__title {
+    padding: 10% 0 0;
+  }
+  &__text {
+    color: $color;
+  }
+}
+
+@media (max-width: $lg) {
+  .event {
+    &__main {
+      height: 600px;
+    }
+    &__left {
+      height: 90%;
+      width: 40%;
+    }
+    &__right {
+      width: 45%;
+      margin-left: 10%;
+    }
+  }
+  .left {
+    &__subTitle {
+      font-size: 16px;
+      line-height: 102.4%;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 102.4%;
+    }
+    &__title {
+      font-size: 50px;
+      width: 50%;
+    }
+  }
+
+  .right {
+    &__text {
+      font-size: 16px;
+      line-height: 102.4%;
+      padding: 0% 1% 0;
+    }
+    &__main {
+      height: 443px;
+      display: flex;
+      padding-left: 5%;
+      flex-direction: column;
+      padding-top: 14%;
+    }
+    &__duration {
+      font-size: 40px;
+      line-height: 133.4%;
+    }
+  }
+  .footer {
+    &__title {
+      font-size: 60px;
+      line-height: 102.4%;
+    }
+    &__text {
+      font-size: 40px;
+      line-height: 102.4%;
+      color: $footer3;
+      margin-bottom: 3.1%;
+    }
+  }
+}
+@media (max-width: $md) {
+  .event {
+    &__main {
+      height: 500px;
+    }
+    &__left {
+      height: 90%;
+      width: 40%;
+    }
+    &__right {
+      width: 45%;
+      margin-left: 10%;
+      margin-top: 17%;
+    }
+    &__footer {
+      padding: 0.5% 1.7% 0.5%;
+    }
+  }
+  .left {
+    &__subTitle {
+      font-size: 15px;
+      line-height: 102.4%;
+    }
+
+    &__text {
+      font-size: 13px;
+      line-height: 102.4%;
+    }
+    &__title {
+      font-size: 40px;
+      width: 50%;
+      padding: 8.5% 0 6.1%;
+    }
+  }
+  .right {
+    &__text {
+      font-size: 16px;
+      line-height: 102.4%;
+      padding: 0% 1% 0;
+    }
+    &__main {
+      height: 443px;
+      display: flex;
+      padding-left: 5%;
+      flex-direction: column;
+      padding-top: 14%;
+    }
+    &__duration {
+      font-size: 30px;
+      line-height: 133.4%;
+    }
+  }
+  .footer {
+    &__title {
+      font-size: 50px;
+      line-height: 102.4%;
+    }
+    &__text {
+      font-size: 30px;
+      line-height: 102.4%;
+      color: $footer3;
+      margin-bottom: 3.1%;
+    }
+  }
+}
+@media (max-width: $sm) {
+  .event {
+    &__main {
+      height: 400px;
+    }
+    &__left {
+      height: 90%;
+      width: 40%;
+    }
+    &__right {
+      width: 45%;
+      margin-left: 10%;
+      margin-top: 0;
+    }
+    &__footer {
+      padding: 0.5% 1.7% 0.5%;
+    }
+  }
+  .left {
+    &__subTitle {
+      font-size: 13px;
+      line-height: 102.4%;
+    }
+
+    &__text {
+      font-size: 11px;
+      line-height: 102.4%;
+    }
+    &__title {
+      font-size: 30px;
+      width: 50%;
+      padding: 8.5% 0 6.1%;
+    }
+  }
+  .right {
+    &__text {
+      font-size: 14px;
+      line-height: 102.4%;
+      padding: 0% 1% 0;
+    }
+    &__main {
+      height: 270px;
+      display: flex;
+      padding-left: 5%;
+      flex-direction: column;
+      padding-top: 14%;
+    }
+    &__duration {
+      font-size: 25px;
+      line-height: 133.4%;
+    }
+  }
+  .footer {
+    &__title {
+      font-size: 40px;
+      line-height: 102.4%;
+    }
+    &__text {
+      font-size: 20px;
+    }
+  }
+}

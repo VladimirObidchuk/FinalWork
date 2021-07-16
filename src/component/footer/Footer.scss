@@ -1,0 +1,115 @@
+@import "../../styles/color";
+@import "../../styles/breakpoint";
+@import "../../styles/font";
+
+.footer {
+  &__main {
+    width: 100%;
+    height: 700px;
+    padding-top: 6.1%;
+    margin: 0 auto;
+  }
+  // &__form {
+  // }
+  &__header {
+    width: 100%;
+    height: 264px;
+    background: url("./BG_footerheader.png") center no-repeat;
+    background-size: cover;
+  }
+  &__leftTitle {
+    @include Montserrat_bold;
+    font-size: 19px;
+    line-height: 23px;
+    padding-bottom: 8.9%;
+  }
+  &__rightTitle {
+    @include Montserrat_medium;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 23px;
+  }
+  &__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 416px;
+    background: $footer;
+    padding-top: 76px;
+  }
+
+  &__left {
+    padding-left: 60px;
+    color: $color_hover;
+  }
+
+  &__right {
+    padding-right: 62px;
+    color: $color_hover;
+  }
+}
+.left {
+  &__footer {
+    @include Montserrat_medium;
+    font-size: 16px;
+    line-height: 20px;
+    color: $footer1;
+    padding-top: 21%;
+  }
+
+  &__item {
+    list-style: none;
+    padding: 4% 0 0;
+  }
+
+  &__list {
+    padding: 5% 0 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    @include Montserrat_medium;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color_hover;
+  }
+  &__link:hover {
+    color: $color;
+  }
+}
+.right {
+  &__pay {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 21% 8% 0 0;
+  }
+}
+.subscrible {
+  &__submit {
+    color: $color_hover;
+  }
+}
+.pay {
+  &__item {
+    border-radius: 5px;
+    width: 34px;
+    height: 24px;
+    color: $footer2;
+    padding-left: 50px;
+  }
+  &__visa {
+    text-align: center;
+    background: url("./method_visa.png") center center no-repeat;
+  }
+  &__mastercard {
+    background: url("./method_mastercard.png") center no-repeat;
+  }
+  &__paypal {
+    background: url("./method_paypal.png") center no-repeat;
+  }
+  &__link {
+    text-decoration: none;
+  }
+}

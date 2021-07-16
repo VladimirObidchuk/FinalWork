@@ -1,0 +1,43 @@
+@import "../../styles/color";
+@import "../../styles/breakpoint";
+@import "../../styles/font";
+
+.moreInfo {
+  // display: none;
+  margin: 0 auto;
+  &_title {
+    @include Montserrat_bold;
+    font-size: 60px;
+    line-height: 102.4%;
+    color: $header_color;
+    padding-top: 5%;
+    padding-left: 5%;
+  }
+
+  &__about {
+    display: flex;
+    @include Montserrat_medium;
+    font-size: 16px;
+    line-height: 23px;
+    color: $header_color;
+    padding: 10% 5%;
+  }
+
+  //   &__textLeft {
+  //     // width: 40%;
+  //   }
+
+  &__textRight {
+    padding-left: 8%;
+  }
+}
+@media (max-width: $xxl) {
+}
+@media (max-width: $xl) {
+}
+@media (max-width: $lg) {
+}
+@media (max-width: $md) {
+}
+@media (max-width: $sm) {
+}
