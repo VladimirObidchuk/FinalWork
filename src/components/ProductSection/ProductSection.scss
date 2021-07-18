@@ -1,0 +1,15 @@
+@import "../../styles/color";
+@import "../../styles/breakpoint";
+@import "../../styles/font";
+
+.product-section {
+  padding: 100px 60px;
+  &__title {
+    @include Montserrat_bold;
+    font-size: 60px;
+    line-height: 102.4%;
+    color: $header_color;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+}
