@@ -6,6 +6,7 @@
   position: relative;
   background: url("./top-header_1.png") center bottom repeat;
   height: 111px;
+  width: 100%;
   &__main {
     background: $color;
 
@@ -14,7 +15,6 @@
     align-items: center;
     width: 100%;
     z-index: 200;
-
     padding: 1.5% 0 1%;
   }
   &__logo {
@@ -77,20 +77,20 @@
 }
 .mobile {
   &__menu {
-    width: 300px;
-    background: $color;
-    backdrop-filter: blur(10px);
+    width: 350px;
+    background: $colorMenu;
+    backdrop-filter: blur(5px);
     position: fixed;
     right: 0px;
-    top: 70px;
+    top: 85px;
     transition: all 0.3s;
     // pointer-events: none;
-    transform: translateX(100%);
+    // transform: translateX(100%);
     @include Montserrat_medium;
     font-size: 30px;
     line-height: 50px;
     text-transform: uppercase;
-    cursor: pointer;
+    // cursor: pointer;
     z-index: 400;
     margin: 0 auto;
   }
@@ -108,20 +108,20 @@
 
   &__item {
     text-align: center;
-    color: $color_hover;
+    color: $color;
     list-style: none;
-    padding: 10% 0 10%;
-    cursor: pointer;
+    padding: 24px 0;
     margin: 0 auto;
   }
 
   &__link {
     text-decoration: none;
+    color: $color;
     cursor: pointer;
-    color: $header_color;
   }
   &__link:hover {
-    color: $color_hover;
+    transform: scale(1.2);
+    color: $color;
   }
   // &__login {
   // }
@@ -129,6 +129,7 @@
   // &__item {
   // }
 }
+
 .burger {
   display: none;
   cursor: pointer;
@@ -153,8 +154,7 @@
   &::after {
     top: 15px;
   }
-
-  .menu-open & {
+  w .menu-open & {
     .burger__button {
       transform: rotate(405deg);
       opacity: 0;
@@ -175,6 +175,11 @@
 .item1 {
   background: url("./login__icon.svg") center no-repeat;
   background-size: contain;
+}
+.item1:hover,
+.item2:hover {
+  transform: scale(1.12);
+  fill: $footer1;
 }
 .item2 {
   background: url("./shop__icon.svg") center no-repeat;
@@ -198,6 +203,9 @@
   }
 }
 @media (max-width: $lg) {
+  // .menu {
+  //   position: fixed;
+  // }
   .burger {
     display: block;
   }

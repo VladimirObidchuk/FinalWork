@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Menu from './component/menu/Menu';
 import Footer from './component/footer/Footer';
 import Header from './component/header/Header';
@@ -15,14 +15,17 @@ import PoductsWork from "./component/productWork/ProductWork";
 import Contact from "./component/contact/Contact";
 import SaleProduct from "./component/saleProduct/SaleProduct";
 import './App.scss';
+import Login from "./component/login/Login";
 
 
 function App() {
+
+
   return (
     <Router>
       <Menu />
       <Switch>
-        <Route exact path="/Home">
+        <Route exact path="/">
           <Header />
           <Tabs />
           <Event />

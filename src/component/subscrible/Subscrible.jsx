@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./Subscrible.scss";
-
+import Form from '../formSubscrible/formSubscrible';
 class Subscrible extends React.Component {
     render() {
         return (
@@ -13,22 +13,7 @@ class Subscrible extends React.Component {
                                 Subscribe us and you won't miss the new arrivals, as well as
                                 discounts and sales.
                             </p>
-                            <form
-                                action="#"
-                                id="subscrible__form"
-                                className="subscrible__form"
-                                method="GET"
-                            >
-                                <input
-                                    className="subscrible__input"
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    placeholder="Your Email"
-                                />
-                                <input type="submit" value="Submit" className="subscrible__submit" />
-                            </form>
-                            <span className="error__email">This field is required</span>
+                            <Form />
                         </div>
                     </div>
                     <div className="subscrible__right">

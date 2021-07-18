@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./Header.scss";
+import Button from '../button/Button';
 
 class Header extends React.Component {
     render() {
@@ -12,16 +13,8 @@ class Header extends React.Component {
                             Winning Rated Battlegrounds requires a high level of coordination,
                             team play, and a strong lead to organize a team of...
                         </p>
-                        <button type="menu" className="header__button">buy now</button>
+                        <Button />
                     </div>
-                    {/* <div className="header__right">
-                        <div className="header__content">
-                            <div className="slide__1 header__body"></div>
-                            {/* <div className="slide__2 header__body"></div>
-                            <div className="slide__3 header__body"></div>
-                            <div className="slide__4 header__body"></div> 
-                        </div> 
-                    </div>*/}
                 </div>
             </div>
 

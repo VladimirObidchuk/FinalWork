@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import Form from '../formSubscrible/formSubscrible';
 import "./Footer.scss";
 
 class Footer extends React.Component {
     render() {
         return (
-
             <div className="footer" id="footer">
                 <div className="footer__main">
                     <div className="footer__header"></div>
@@ -29,18 +29,7 @@ class Footer extends React.Component {
                         </div>
                         <div className="footer__right">
                             <div className="footer__rightTitle">Subscribe to newsletter</div>
-                            <form action="#" className="subscrible__form footer__form">
-                                <input
-                                    className="subscrible__input"
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    placeholder="Your Email"
-                                />
-                                <button type="submit" className="subscrible__submit">
-                                    Subscribe
-                                </button>
-                            </form>
+                            <Form />
                             <ul className="right__pay">
                                 <li className="pay__item pay__visa">
                                     <a href="/#" className="pay__link"></a>

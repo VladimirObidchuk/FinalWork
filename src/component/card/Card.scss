@@ -1,0 +1,73 @@
+@import "../../styles/color";
+@import "../../styles/breakpoint";
+@import "../../styles/font";
+
+.sale {
+  &__main {
+    width: 274px;
+    height: 327px;
+    background-color: rgba(31, 39, 27, 0.87);
+    border-radius: 5px;
+    color: $color_hover;
+    margin: 0 auto;
+  }
+}
+.card {
+  &__header {
+    height: 82%;
+    padding: 7% 0 0 9%;
+  }
+  &__cycle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    color: $color;
+  }
+
+  &__title {
+    @include Montserrat_bold;
+    font-size: 25px;
+    line-height: 102.4%;
+    color: $color_hover;
+    margin: 0 0 4%;
+  }
+
+  &__text {
+    @include Montserrat_medium;
+    font-size: 12px;
+    line-height: 102.4%;
+    margin: 1% 0 1%;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 9%;
+    color: $color_hover;
+  }
+
+  &__subText {
+    @include Montserrat_medium;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__subTitle {
+    @include Montserrat_bold;
+    font-size: 23px;
+    line-height: 102.4%;
+  }
+}
+button {
+  width: 103px;
+  height: 40px;
+  background: $color;
+  font-size: 11px;
+  line-height: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+}
