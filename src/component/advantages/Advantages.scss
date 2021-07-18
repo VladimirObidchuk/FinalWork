@@ -30,15 +30,16 @@
     justify-content: center;
     align-items: center;
     list-style: none;
-    max-width: 1200px;
-    margin: 0 auto;
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1;
+    //
+  }
+  &__item:first-child {
+    padding-left: 4%;
   }
   &__link {
     width: 56%;

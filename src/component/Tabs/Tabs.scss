@@ -1,0 +1,151 @@
+@import "../../styles/color";
+@import "../../styles/breakpoint";
+@import "../../styles/font";
+
+.header {
+  &__nav {
+    width: 1160px;
+    margin: 0 auto;
+    // margin-left: 60px;
+  }
+}
+.tabs {
+  &__nav {
+    display: flex;
+    list-style: none;
+    background: rgba(244, 176, 43, 0.12);
+    border-radius: 3px;
+  }
+  &__content {
+    width: 100%;
+  }
+  &__item {
+    width: 232px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    @include Montserrat_semibold;
+    font-size: 22px;
+    line-height: 102.4%;
+    border-radius: 0;
+  }
+
+  &__item:hover {
+    background: $color;
+    color: $color_hover;
+  }
+  &__first,
+  &__second {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.tab {
+  &__card:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.active {
+  background-color: $color;
+  color: $color_hover;
+}
+.title {
+  &__card {
+    @include Montserrat_bold;
+    font-size: 22px;
+    line-height: 102.4%;
+    color: $color_hover;
+    padding-bottom: 12px;
+  }
+}
+@media (max-width: $xxl) {
+}
+@media (max-width: $xl) {
+  .header__nav {
+    width: 97%;
+  }
+  .tabs__item {
+    width: 228px;
+  }
+  .tab__card {
+    margin-bottom: 20px;
+  }
+  .tab__card:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+@media (max-width: $lg) {
+  .header__nav {
+    width: 830px;
+  }
+  .tabs__item {
+    width: 166px;
+    font-size: 17px;
+  }
+  .tab__card {
+    height: 166px;
+    width: 290px;
+    margin-bottom: 9px;
+  }
+  .title__card {
+    font-size: 19px;
+    line-height: 102.4%;
+    padding-bottom: 12px;
+  }
+  .tab__card:not(:last-child) {
+    margin-right: 9px;
+  }
+}
+@media (max-width: $md) {
+  .header__nav {
+    width: 627px;
+  }
+  .tabs__item {
+    width: 126px;
+    height: 60px;
+    font-size: 13px;
+  }
+  .tab__card {
+    height: 164px;
+    width: 228px;
+    margin-bottom: 6px;
+  }
+  .title__card {
+    font-size: 16px;
+  }
+  .tab__button {
+    width: 102px;
+  }
+  .tab__card:not(:last-child) {
+    margin-right: 7px;
+  }
+}
+@media (max-width: $sm) {
+  .header__nav {
+    width: 552px;
+  }
+  .tab__card {
+    height: 103px;
+    width: 173px;
+    background-size: cover;
+    margin-bottom: 7px;
+  }
+  .title__card {
+    font-size: 13px;
+  }
+  .tab__button {
+    width: 85px;
+    height: 30px;
+  }
+  .tab__card:not(:last-child) {
+    margin-right: 7px;
+  }
+  .tabs__item {
+    width: 107px;
+    height: 60px;
+    font-size: 12px;
+  }
+}

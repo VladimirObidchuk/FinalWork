@@ -1,0 +1,107 @@
+@import "../../styles/color";
+@import "../../styles/breakpoint";
+@import "../../styles/font";
+
+.main {
+  &__products {
+    color: $color_hover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 204px;
+  }
+}
+.product {
+  &__title {
+    @include Montserrat_bold;
+    font-size: 60px;
+    line-height: 102.4%;
+    color: $header_color;
+    padding: 2% 0 4% 5%;
+  }
+  &__main {
+    width: 279px;
+    height: 327px;
+    background: linear-gradient(
+        180deg,
+        rgba(31, 39, 27, 0) 0%,
+        rgba(31, 39, 27, 0.87) 100%
+      ),
+      url("./BG_Product.png") no-repeat;
+    border-radius: 5px;
+    color: $color_hover;
+  }
+  &__card {
+    // width: 279px;
+    margin-left: 15px;
+  }
+}
+.products {
+  &__cards {
+    padding-left: 60px;
+    padding-right: 80px;
+  }
+}
+.card {
+  &__header {
+    height: 82%;
+    padding: 7% 0 0 9%;
+  }
+  &__cycle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    color: $color;
+  }
+
+  &__title {
+    @include Montserrat_bold;
+    font-size: 25px;
+    line-height: 102.4%;
+    color: $color_hover;
+    margin: 0 0 4%;
+  }
+
+  &__text {
+    @include Montserrat_medium;
+    font-size: 12px;
+    line-height: 102.4%;
+    margin: 1% 0 1%;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 9%;
+    color: $color_hover;
+  }
+
+  &__subText {
+    @include Montserrat_medium;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__subTitle {
+    @include Montserrat_bold;
+    font-size: 23px;
+    line-height: 102.4%;
+  }
+  &__buy {
+    width: 103px;
+    height: 40px;
+    background: #f4b02b;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    // backdrop-filter: blur(10px);
+    border-radius: 5px;
+    @include Montserrat_semibold;
+    font-size: 11px;
+    line-height: 13px;
+    text-transform: uppercase;
+    color: $color_hover;
+    transform: scale(1.1);
+  }
+}

@@ -5,7 +5,7 @@ function Button({ className, onClick, type = "solid" }) {
   return (
     <button
       type="menu"
-      className={cn("button", className, `button--${type}`)}
+      className={cn("header__button", className, `header__button--${type}`)}
       onClick={onClick}
     >
       buy now
