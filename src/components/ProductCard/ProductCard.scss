@@ -2,17 +2,13 @@
 @import "../../styles/breakpoint";
 @import "../../styles/font";
 
-.sale {
-  &__main {
-    width: 274px;
-    height: 327px;
-    background-color: rgba(31, 39, 27, 0.87);
-    border-radius: 5px;
-    color: $color_hover;
-    margin: 0 auto;
-  }
-}
 .card {
+  width: 274px;
+  height: 327px;
+  background-color: rgba(31, 39, 27, 0.87);
+  border-radius: 5px;
+  color: $color_hover;
+  margin: 0 auto;
   &__header {
     height: 82%;
     padding: 7% 0 0 9%;
@@ -59,15 +55,4 @@
     font-size: 23px;
     line-height: 102.4%;
   }
-}
-button {
-  width: 103px;
-  height: 40px;
-  background: $color;
-  font-size: 11px;
-  line-height: 13px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-sizing: border-box;
-  backdrop-filter: blur(10px);
-  border-radius: 5px;
 }
