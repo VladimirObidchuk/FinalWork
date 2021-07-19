@@ -7,10 +7,13 @@
   &__form {
     width: 413px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     @include Montserrat_medium;
     font-size: 18px;
     line-height: 102.4%;
+  }
+  &__block {
+    display: flex;
   }
   &__input {
     width: 100%;
@@ -40,12 +43,18 @@
     z-index: 100;
   }
 }
-.error {
+.error__email {
   @include Montserrat_medium;
-  font-size: 16px;
-  line-height: 20px;
+  width: 68%;
+  font-size: 15px;
+  line-height: 10px;
   text-transform: uppercase;
-  color: $color_hover;
+  color: #ff0000;
+  text-align: center;
+  padding: 10px 0;
+  background: $error_bg;
+  // backdrop-filter: blur(22px);
+  border-radius: 4px;
 }
 @media (max-width: $xxl) {
 }
