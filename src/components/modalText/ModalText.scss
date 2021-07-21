@@ -1,0 +1,25 @@
+@import "../../styles/color";
+@import "../../styles/breakpoint";
+@import "../../styles/font";
+
+.modal {
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(3px);
+    margin: 0 auto;
+  }
+  &__title {
+    @include Montserrat_medium;
+    font-size: 20px;
+    color: $header_color;
+  }
+}

@@ -1,21 +1,29 @@
 // import React, { Component } from 'react';
 import { useState } from "react";
+import ModalText from "../modalText/ModalText";
 import Modal from "../modalWin/ModalWin";
 import "./formSubscrible.scss";
 
 function Form() {
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState(false);
   const [error, setError] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (error || !text) {
-      return;
+      return setError(true);
     }
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 3000);
+    setTimeout(() => {
+      setMessage(true);
+    }, 3000);
+    setTimeout(() => {
+      setMessage(false);
+    }, 8000);
   };
 
   const [text, setText] = useState("");
@@ -52,6 +60,9 @@ function Form() {
       </div>
       {error && <span className="error__email">{error}</span>}
       {loading && <Modal />}
+      {message && (
+        <ModalText value=" Thank you for your letter! We will get back to you soon." />
+      )}
     </form>
   );
 }
