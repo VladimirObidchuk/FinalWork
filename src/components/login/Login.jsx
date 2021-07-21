@@ -38,14 +38,14 @@ function Login({ onClose }) {
       setLoading(true);
       setTimeout(() => {
         setLoading(false);
-      }, 3000);
+      }, 2000);
       setTimeout(() => {
         setMessage(true);
-      }, 3000);
+      }, 2000);
       setTimeout(() => {
         setMessage(false);
         onClose();
-      }, 8000);
+      }, 4000);
     }
   };
 

@@ -45,10 +45,6 @@
   }
 }
 .left {
-  &__header {
-    // padding-left: 1.5%;
-  }
-
   &__subTitle {
     @include Montserrat_bold;
     font-size: 16px;
@@ -99,7 +95,6 @@
     height: 540px;
     background: rgba(255, 255, 255, 0.06);
     box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.01);
-    // backdrop-filter: blur(6px);
     border-radius: 5px;
     padding-left: 4%;
     padding-top: 1.5%;
@@ -108,7 +103,6 @@
     @include Montserrat_bold;
     font-size: 49px;
     line-height: 133.4%;
-    // color: #f4b02b;
     text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.08);
   }
 }

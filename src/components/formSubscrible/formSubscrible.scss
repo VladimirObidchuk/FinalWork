@@ -5,7 +5,6 @@
 .subscrible {
   margin: 0 auto;
   &__form {
-    width: 413px;
     display: flex;
     flex-direction: column;
     @include Montserrat_medium;
@@ -16,7 +15,7 @@
     display: flex;
   }
   &__input {
-    width: 100%;
+    width: 260px;
     height: 69px;
     background: rgba(255, 255, 255, 0.11);
     box-sizing: border-box;
@@ -44,7 +43,7 @@
 }
 .error__email {
   @include Montserrat_medium;
-  width: 68%;
+  width: 60%;
   font-size: 15px;
   line-height: 10px;
   text-transform: uppercase;
@@ -52,12 +51,22 @@
   text-align: center;
   padding: 10px 0;
   background: $error_bg;
-  // backdrop-filter: blur(22px);
   border-radius: 4px;
 }
 @media (max-width: $xxl) {
 }
 @media (max-width: $xl) {
+  .subscrible {
+    &__submit {
+      width: 140px;
+      height: 60px;
+      font-size: 17px;
+    }
+    &__input {
+      width: 240px;
+      height: 60px;
+    }
+  }
 }
 @media (max-width: $lg) {
   .subscrible {
@@ -72,6 +81,15 @@
     &__image {
       height: 479.88px;
       background-size: contain;
+    }
+    &__submit {
+      width: 100px;
+      height: 60px;
+      font-size: 17px;
+    }
+    &__input {
+      width: 220px;
+      height: 60px;
     }
   }
 }
@@ -98,12 +116,30 @@
       height: 429.88px;
       background-size: contain;
     }
+    &__submit {
+      width: 81px;
+      height: 45px;
+      font-size: 17px;
+    }
+    &__input {
+      width: 170px;
+      height: 45px;
+    }
   }
 }
 @media (max-width: $sm) {
   .subscrible {
     &__text {
       width: 130%;
+    }
+    &__submit {
+      width: 80px;
+      height: 35px;
+      font-size: 16px;
+    }
+    &__input {
+      width: 150px;
+      height: 35px;
     }
   }
 }

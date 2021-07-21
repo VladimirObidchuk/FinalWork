@@ -45,8 +45,7 @@
   &__list {
     list-style: none;
     display: flex;
-    margin-left: 2%;
-    // justify-content: center;
+    margin-left: 60px;
   }
   &__item:not(:first-child) {
     margin-left: 8.3%;
@@ -84,13 +83,10 @@
     right: 0px;
     top: 85px;
     transition: all 0.3s;
-    // pointer-events: none;
-    // transform: translateX(100%);
     @include Montserrat_medium;
     font-size: 30px;
     line-height: 50px;
     text-transform: uppercase;
-    // cursor: pointer;
     z-index: 400;
     margin: 0 auto;
   }
@@ -123,13 +119,7 @@
     transform: scale(1.2);
     color: $color;
   }
-  // &__login {
-  // }
-
-  // &__item {
-  // }
 }
-
 .burger {
   display: none;
   cursor: pointer;
@@ -203,9 +193,6 @@
   }
 }
 @media (max-width: $lg) {
-  // .menu {
-  //   position: fixed;
-  // }
   .burger {
     display: block;
   }

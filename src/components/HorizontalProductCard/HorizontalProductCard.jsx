@@ -7,9 +7,7 @@ function HorizontalProductCard({ image }) {
       className="product-card-h"
       key={image}
       style={{
-        background: `url(${
-          process.env.PUBLIC_URL + "/img/" + image
-        }) no-repeat`,
+        background: `url(${process.env.PUBLIC_URL + "/img/" + image})no-repeat`,
         backgroundSize: `cover`,
       }}
     >

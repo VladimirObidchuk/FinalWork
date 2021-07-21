@@ -5,12 +5,13 @@ import { ReactComponent as TelIcon } from "./icons/tel.svg";
 import Modal from "../modalWin/ModalWin";
 import ModalText from "../modalText/ModalText";
 import { useState } from "react";
-// import ButtonMailto from "../emailButton/EmailButton";
 
 function Contact() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState(false);
-  const [error, setError] = useState(null);
+  const [nameError, setNameError] = useState(null);
+  const [phoneError, setPhoneError] = useState(null);
+  const [mailError, setmailError] = useState(null);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [mail, setMail] = useState("");
@@ -19,58 +20,52 @@ function Contact() {
     const name = e.target.value;
     setName(name);
     if (!name) {
-      setError(true);
+      setNameError(true);
     } else {
-      setError(null);
+      setNameError(null);
     }
   };
   const handleChangePhone = (e) => {
     const phone = e.target.value;
     setPhone(phone);
     if (!phone) {
-      setError(true);
+      setPhoneError(true);
     } else {
-      setError(null);
+      setPhoneError(null);
     }
   };
   const handleChangeMail = (e) => {
     const mail = e.target.value;
     setMail(mail);
     if (!mail) {
-      setError(true);
+      setmailError(true);
     } else {
-      setError(null);
+      setmailError(null);
     }
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!name || !mail || !phone) {
-      return setError("This field is required");
+    if (!name) {
+      return setNameError("This field is required");
     }
-    // if (!mail) {
-    //   return setError("This field is required");
-    // }
-    // if (!phone) {
-    //   return setError("This field is required");
-    // }
-    else {
-      setLoading(true);
-      setTimeout(() => {
-        setLoading(false);
-      }, 3000);
-      setTimeout(() => {
-        setMessage(true);
-      }, 3000);
-      setTimeout(() => {
-        setMessage(false);
-      }, 8000);
+    if (!mail) {
+      return setmailError("This field is required");
     }
+    if (!phone) {
+      return setPhoneError("This field is required");
+    }
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    setTimeout(() => {
+      setMessage(true);
+    }, 2000);
+    setTimeout(() => {
+      setMessage(false);
+    }, 4000);
   };
 
-  const onClick = (e) => {
-    // window.location =;
-    e.preventDefault();
-  };
   return (
     <div className="contact" id="contact">
       <div className="contact__main">
@@ -90,7 +85,7 @@ function Contact() {
               placeholder="Name"
               onChange={handleChangeName}
             />
-            {error && <span className="error__email">{error}</span>}
+            {nameError && <span className="error__email">{nameError}</span>}
             <input
               type="tel"
               name="contact__tel"
@@ -99,7 +94,7 @@ function Contact() {
               placeholder="Phone"
               onChange={handleChangePhone}
             />
-            {error && <span className="error__email">{error}</span>}
+            {phoneError && <span className="error__email">{phoneError}</span>}
             <input
               type="email"
               name="contact__mail"
@@ -108,7 +103,7 @@ function Contact() {
               placeholder="Email"
               onChange={handleChangeMail}
             />
-            {error && <span className="error__email">{error}</span>}
+            {mailError && <span className="error__email">{mailError}</span>}
             <textarea
               name="contact__text"
               className="contact__text"
@@ -126,11 +121,7 @@ function Contact() {
           <div className="contact__image"></div>
         </div>
         <div className="contact__footer">
-          <button
-            type="submit"
-            className="email contact__connect"
-            onClick={onClick}
-          >
+          <button type="submit" className="email contact__connect">
             <EmailIcon className="contact__img img__email" />
             email@mail.ru
           </button>

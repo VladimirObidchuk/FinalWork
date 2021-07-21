@@ -37,11 +37,6 @@ function Menu() {
               </Link>
             </li>
             <li className="menu__item">
-              <a href="#news" className="menu__link shop">
-                SHOP
-              </a>
-            </li>
-            <li className="menu__item">
               <Link to="/contact" className="menu__link contact__link">
                 contacts
               </Link>
@@ -51,9 +46,6 @@ function Menu() {
         <div className="mobile__login">
           <a href="#login" className="login__item item1" onClick={handleLogin}>
             <div className="item1"></div>
-          </a>
-          <a href="#registered" className="login__item item2" target="_blank">
-            <div className="item2"></div>{" "}
           </a>
         </div>
         {open ? (
@@ -68,12 +60,6 @@ function Menu() {
                 <Link to="/aboutUs" className="mobile__link about__link">
                   About Us
                 </Link>
-              </li>
-              <li className="mobile__item">
-                <a href="#news" className="mobile__link shop">
-                  {" "}
-                  SHOP
-                </a>
               </li>
               <li className="mobile__item">
                 <Link to="/contact" className="mobile__link contact__link">
@@ -91,10 +77,6 @@ function Menu() {
         <div className="menu__login" id="menu__login">
           <a href="#login" className="footer__item" onClick={handleLogin}>
             login
-          </a>
-          <a href="#registered" className="footer__item" target="_blank">
-            {" "}
-            registered
           </a>
         </div>
       </div>

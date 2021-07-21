@@ -23,11 +23,11 @@ class Footer extends React.Component {
                     About Us
                   </Link>
                 </li>
-                <li className="left__list">
+                {/* <li className="left__list">
                   <a href="/#" className="left__link">
                     SHOP
                   </a>
-                </li>
+                </li> */}
                 <li className="left__list">
                   <Link to="/contact" className="left__link contact__link">
                     contacts
