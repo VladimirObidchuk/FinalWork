@@ -46,14 +46,15 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name) {
-      return setNameError("This field is required");
-    }
-    if (!mail) {
-      return setmailError("This field is required");
+      return setNameError("Name is required");
     }
     if (!phone) {
-      return setPhoneError("This field is required");
+      return setPhoneError("Phone  is required");
     }
+    if (!mail) {
+      return setmailError("Email  is required");
+    }
+
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
