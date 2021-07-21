@@ -5,41 +5,71 @@ import { ReactComponent as TelIcon } from "./icons/tel.svg";
 import Modal from "../modalWin/ModalWin";
 import ModalText from "../modalText/ModalText";
 import { useState } from "react";
+// import ButtonMailto from "../emailButton/EmailButton";
 
 function Contact() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState(false);
   const [error, setError] = useState(null);
-  const [text, setText] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [mail, setMail] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // handleChange();
-    // if (handleChange() === false)
-
-    if (error || !text) {
-      return setError(true);
-    }
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-    setTimeout(() => {
-      setMessage(true);
-    }, 3000);
-    setTimeout(() => {
-      setMessage(false);
-    }, 8000);
-  };
-
-  const handleChange = (e) => {
-    const value = e.target.value;
-    setText(value);
-    if (!value) {
-      setError("This field is required");
+  const handleChangeName = (e) => {
+    const name = e.target.value;
+    setName(name);
+    if (!name) {
+      setError(true);
     } else {
       setError(null);
     }
+  };
+  const handleChangePhone = (e) => {
+    const phone = e.target.value;
+    setPhone(phone);
+    if (!phone) {
+      setError(true);
+    } else {
+      setError(null);
+    }
+  };
+  const handleChangeMail = (e) => {
+    const mail = e.target.value;
+    setMail(mail);
+    if (!mail) {
+      setError(true);
+    } else {
+      setError(null);
+    }
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!name || !mail || !phone) {
+      return setError("This field is required");
+    }
+    // if (!mail) {
+    //   return setError("This field is required");
+    // }
+    // if (!phone) {
+    //   return setError("This field is required");
+    // }
+    else {
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+      }, 3000);
+      setTimeout(() => {
+        setMessage(true);
+      }, 3000);
+      setTimeout(() => {
+        setMessage(false);
+      }, 8000);
+    }
+  };
+
+  const onClick = (e) => {
+    // window.location =;
+    e.preventDefault();
   };
   return (
     <div className="contact" id="contact">
@@ -58,7 +88,7 @@ function Contact() {
               className="contact__name contact__style"
               id="contact__name"
               placeholder="Name"
-              onChange={handleChange}
+              onChange={handleChangeName}
             />
             {error && <span className="error__email">{error}</span>}
             <input
@@ -67,7 +97,7 @@ function Contact() {
               className="contact__tel contact__style"
               id="contact__tel"
               placeholder="Phone"
-              onChange={handleChange}
+              onChange={handleChangePhone}
             />
             {error && <span className="error__email">{error}</span>}
             <input
@@ -76,7 +106,7 @@ function Contact() {
               className="contact__mail contact__style"
               id="contact__mail"
               placeholder="Email"
-              onChange={handleChange}
+              onChange={handleChangeMail}
             />
             {error && <span className="error__email">{error}</span>}
             <textarea
@@ -96,7 +126,11 @@ function Contact() {
           <div className="contact__image"></div>
         </div>
         <div className="contact__footer">
-          <button type="submit" className="email contact__connect">
+          <button
+            type="submit"
+            className="email contact__connect"
+            onClick={onClick}
+          >
             <EmailIcon className="contact__img img__email" />
             email@mail.ru
           </button>

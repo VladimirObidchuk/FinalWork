@@ -3,10 +3,7 @@
 @import "../../styles/font";
 
 .contact {
-  // display: none;
   margin: 0 auto;
-  //   &_style {
-  //   }
 
   &__main {
     margin-left: 5%;
@@ -70,8 +67,6 @@
     align-items: center;
   }
 
-  //   &__img {
-  //   }
   &__button {
     width: 763px;
     height: 59px;
@@ -104,20 +99,6 @@
     color: $color_hover;
   }
 }
-// .email {
-// }
-// .img {
-//   &__email {
-//   }
-// }
-// .tel {
-//   &__email {
-//   }
-// }
-// .adress {
-//   &__email {
-//   }
-// }
 @media (max-width: $xxl) {
 }
 @media (max-width: $xl) {
