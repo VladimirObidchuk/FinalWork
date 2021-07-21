@@ -22,13 +22,13 @@ function Form() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2000);
     setTimeout(() => {
       setMessage(true);
-    }, 3000);
+    }, 2000);
     setTimeout(() => {
       setMessage(false);
-    }, 8000);
+    }, 4000);
   };
 
   const handleChange = (e) => {
