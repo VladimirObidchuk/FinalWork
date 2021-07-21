@@ -31,14 +31,13 @@
     line-height: 20px;
     z-index: 100;
   }
-  &__style::placeholder,
-  &__text::placeholder {
+  &__style,
+  &__text {
     font-size: 16px;
     line-height: 20px;
-    color: $header_color1;
     padding-left: 2%;
   }
-  &__text::placeholder {
+  &__text {
     padding-top: 1%;
   }
   &__style {

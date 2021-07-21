@@ -22,7 +22,7 @@ function ProductCard({ image }) {
           <p className="card__subText">cost</p>
           <p className="card__subTitle">$39</p>
         </div>
-        <Button />
+        <Button>buy now</Button>
       </div>
     </div>
   );

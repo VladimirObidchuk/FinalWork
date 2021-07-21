@@ -13,7 +13,7 @@ class Header extends React.Component {
               Winning Rated Battlegrounds requires a high level of coordination,
               team play, and a strong lead to organize a team of...
             </p>
-            <Button type="outlined" />
+            <Button type="outlined">buy now</Button>
           </div>
         </div>
       </div>

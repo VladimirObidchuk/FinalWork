@@ -9,10 +9,15 @@ function Form() {
   const [message, setMessage] = useState(false);
   const [error, setError] = useState(null);
 
+  const [text, setText] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (error || !text) {
-      return setError(true);
+    if (!text) {
+      setError("This field is required");
+      return;
+    } else {
+      setError(null);
     }
     setLoading(true);
     setTimeout(() => {
@@ -26,16 +31,9 @@ function Form() {
     }, 8000);
   };
 
-  const [text, setText] = useState("");
-
   const handleChange = (e) => {
-    const value = e.target.value;
-    setText(value);
-    if (!value) {
-      setError("This field is required");
-    } else {
-      setError(null);
-    }
+    setText(e.target.value);
+    setError(null);
   };
 
   return (

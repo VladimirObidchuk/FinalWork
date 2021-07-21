@@ -5,24 +5,19 @@ import "./Menu.scss";
 
 function Menu() {
   const [open, setOpen] = useState(null);
-  const [menu, setClassed] = useState(null);
-  const handleClick = (NewMenu) => {
-    if (!open) {
-      setOpen(NewMenu);
-    } else {
-      setOpen(null);
-      setClassed(null);
-    }
+  const handleClick = () => {
+    setOpen(!open);
   };
-  const [login, setMenu] = useState(null);
+  const [showLogin, setShowLogin] = useState(false);
 
-  const handleOpen = (OpenMenu) => {
-    if (!login) {
-      setMenu(OpenMenu);
-    } else {
-      setMenu(null);
-    }
+  const handleLogin = () => {
+    setShowLogin(!showLogin);
   };
+
+  const closeLogin = () => {
+    setShowLogin(false);
+  };
+
   return (
     <div className="menu">
       <div className="menu__main">
@@ -54,7 +49,7 @@ function Menu() {
           </ul>
         </nav>
         <div className="mobile__login">
-          <a href="#login" className="login__item item1" onClick={handleOpen}>
+          <a href="#login" className="login__item item1" onClick={handleLogin}>
             <div className="item1"></div>
           </a>
           <a href="#registered" className="login__item item2" target="_blank">
@@ -94,7 +89,7 @@ function Menu() {
           </div>
         </div>
         <div className="menu__login" id="menu__login">
-          <a href="#login" className="footer__item" onClick={handleOpen}>
+          <a href="#login" className="footer__item" onClick={handleLogin}>
             login
           </a>
           <a href="#registered" className="footer__item" target="_blank">
@@ -103,7 +98,7 @@ function Menu() {
           </a>
         </div>
       </div>
-      {login ? <Login /> : null}
+      {showLogin ? <Login onClose={closeLogin} /> : null}
     </div>
   );
 }

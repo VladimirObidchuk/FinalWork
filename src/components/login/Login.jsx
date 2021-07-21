@@ -3,7 +3,7 @@ import Modal from "../modalWin/ModalWin";
 import ModalText from "../modalText/ModalText";
 import "./Login.scss";
 
-function Login() {
+function Login({ onClose }) {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState(false);
   const [error, setError] = useState(null);
@@ -44,6 +44,7 @@ function Login() {
       }, 3000);
       setTimeout(() => {
         setMessage(false);
+        onClose();
       }, 8000);
     }
   };

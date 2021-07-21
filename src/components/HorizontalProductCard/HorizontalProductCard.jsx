@@ -16,7 +16,7 @@ function HorizontalProductCard({ image }) {
       <div className="product-card-h__main">
         <div className="product-card-h__leftSide">
           <h3 className="product-card-h__title">RGD RATING CARRY</h3>
-          <Button type="blurred" />
+          <Button type="blurred">buy now</Button>
         </div>
         <div className="product-card-h__rightSide">
           <div className="product-card-h__rightImg">$39</div>
