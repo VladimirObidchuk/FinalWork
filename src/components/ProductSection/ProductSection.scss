@@ -13,3 +13,9 @@
     margin-bottom: 50px;
   }
 }
+
+@media (max-width: $sm) {
+  .product-section__title {
+    font-size: 50px;
+  }
+}
