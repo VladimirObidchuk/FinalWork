@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/FinalWork/static/css/main.8e680255.chunk.css",
+    "main.js": "/FinalWork/static/js/main.eb2564e1.chunk.js",
+    "main.js.map": "/FinalWork/static/js/main.eb2564e1.chunk.js.map",
+    "runtime-main.js": "/FinalWork/static/js/runtime-main.17a3d5db.js",
+    "runtime-main.js.map": "/FinalWork/static/js/runtime-main.17a3d5db.js.map",
+    "static/css/2.a5265f3e.chunk.css": "/FinalWork/static/css/2.a5265f3e.chunk.css",
+    "static/js/2.e25e2f09.chunk.js": "/FinalWork/static/js/2.e25e2f09.chunk.js",
+    "static/js/2.e25e2f09.chunk.js.map": "/FinalWork/static/js/2.e25e2f09.chunk.js.map",
+    "index.html": "/FinalWork/index.html",
+    "static/css/2.a5265f3e.chunk.css.map": "/FinalWork/static/css/2.a5265f3e.chunk.css.map",
+    "static/css/main.8e680255.chunk.css.map": "/FinalWork/static/css/main.8e680255.chunk.css.map",
+    "static/js/2.e25e2f09.chunk.js.LICENSE.txt": "/FinalWork/static/js/2.e25e2f09.chunk.js.LICENSE.txt",
+    "static/media/Advantages.scss": "/FinalWork/static/media/BG_advantages.b0c8ade6.png",
+    "static/media/Contact.scss": "/FinalWork/static/media/BG_contact.8def7459.png",
+    "static/media/Footer.scss": "/FinalWork/static/media/BG_footerheader.34eb3b8d.png",
+    "static/media/Event.scss": "/FinalWork/static/media/BG_four.f7b84ba7.png",
+    "static/media/Statistic.scss": "/FinalWork/static/media/BG_info.faa47559.png",
+    "static/media/Header.scss": "/FinalWork/static/media/BG_second_img.d144fd4d.png",
+    "static/media/Subscrible.scss": "/FinalWork/static/media/image_subscribe.d6f9cf5a.png",
+    "static/media/address.c03caa10.svg": "/FinalWork/static/media/address.c03caa10.svg",
+    "static/media/advantages_discounts.d59e945f.svg": "/FinalWork/static/media/advantages_discounts.d59e945f.svg",
+    "static/media/advantages_hange.d3d03e3c.svg": "/FinalWork/static/media/advantages_hange.d3d03e3c.svg",
+    "static/media/advantages_timer.2f5ec91d.svg": "/FinalWork/static/media/advantages_timer.2f5ec91d.svg",
+    "static/media/advantages_wallet.504d4cb6.svg": "/FinalWork/static/media/advantages_wallet.504d4cb6.svg",
+    "static/media/email.e10e11a4.svg": "/FinalWork/static/media/email.e10e11a4.svg",
+    "static/media/HorizontalProductCard.scss": "/FinalWork/static/media/flag__vector.43229fb2.svg",
+    "static/media/Menu.scss": "/FinalWork/static/media/top-header_1.24928fe7.png",
+    "static/media/PoductsWork.scss": "/FinalWork/static/media/products_work5.7eddf4f0.png",
+    "static/media/tel.f31406b0.svg": "/FinalWork/static/media/tel.f31406b0.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.17a3d5db.js",
+    "static/css/2.a5265f3e.chunk.css",
+    "static/js/2.e25e2f09.chunk.js",
+    "static/css/main.8e680255.chunk.css",
+    "static/js/main.eb2564e1.chunk.js"
+  ]
+}
